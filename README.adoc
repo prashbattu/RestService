@@ -2,7 +2,8 @@
 Prashant Battu
 
 This is a sample application build using Spring Boot 
-== Running the application
+
+=== Running & Testing the application
 If you want to run the application locally you'll need to follow these steps:
 
 === Run the application
@@ -26,4 +27,4 @@ curl http://localhost:8080/venues/recommended/San Fransisco
 ----
 
 === To-do
-Improve test coverage
+Improve test coverage and add REST- Assured
