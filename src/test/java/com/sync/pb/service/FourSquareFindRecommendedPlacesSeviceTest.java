@@ -1,6 +1,5 @@
 package com.sync.pb.service;
 
-import java.util.Collection;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -36,33 +35,30 @@ public class FourSquareFindRecommendedPlacesSeviceTest extends AbstractTest {
         String result = service.findRecommendedPlaces(poi);
 
         Assert.assertNotNull("failure - expected not null", result);
-//        Assert.assertEquals("failure - expected list size", 2, list.size());
 
     }
     
     
-    @Test
-    public void testSF() {
-
-    	PlaceOfInterest poi = new PlaceOfInterest("San Franscisco");
-        String result = service.findRecommendedPlaces(poi);
-
-        Assert.assertNotNull("failure - expected not null", result);
-//        Assert.assertEquals("failure - expected list size", 2, list.size());
-
-    }
-    
-    
-    @Test
-    public void testNotFound() {
-
-    	PlaceOfInterest poi = new PlaceOfInterest("Blah");
-        String result = service.findRecommendedPlaces(poi);
-
-        Assert.assertNotNull("failure - expected not null", result);
-//        Assert.assertEquals("failure - expected list size", 2, list.size());
-
-    }
+//    @Test
+//    public void testSF() {
+//
+//    	    PlaceOfInterest poi = new PlaceOfInterest("San Franscisco");
+//        String result = service.findRecommendedPlaces(poi);
+//
+//        Assert.assertNotNull("failure - expected not null", result);
+//
+//    }
+//    
+//    
+//    @Test
+//    public void testNotFound() {
+//
+//    	    PlaceOfInterest poi = new PlaceOfInterest("Blah");
+//        String result = service.findRecommendedPlaces(poi);
+//
+//        Assert.assertNotNull("failure - expected not null", result);
+//
+//    }
 
 
 

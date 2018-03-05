@@ -1,0 +1,29 @@
+= Consuming Foursquare API 
+Prashant Battu
+
+This is a sample application build using Spring Boot 
+== Running the application
+If you want to run the application locally you'll need to follow these steps:
+
+=== Run the application
+
+[subs="verbatim"]
+----
+mvn spring-boot:run
+----
+
+1. Test to find recommended venues in London (output in JSON)
+[subs="verbatim"]
+----
+curl http://localhost:8080/venues/recommended/London
+----
+
+
+2. Test to find recommended venues in San Fransisco (output in JSON)
+[subs="verbatim"]
+----
+curl http://localhost:8080/venues/recommended/San Fransisco
+----
+
+=== To-do
+Improve test coverage

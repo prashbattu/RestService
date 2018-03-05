@@ -1,13 +1,9 @@
 package com.sync.pb.web;
 
 
-import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-
-import java.util.ArrayList;
-import java.util.Collection;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -24,20 +20,20 @@ import com.sync.pb.domain.PlaceOfInterest;
 import com.sync.pb.service.FourSquareFindRecommendedPlacesService;
 
 /**
- * Unit tests for the GreetingController using Mockito mocks and spies.
+ * Unit tests for the SearchPlacesController using Mockito mocks and spies.
  * 
  */
 public class SearchPlaceControllerMockTest extends AbstractControllerTest {
 
     /**
-     * A mocked GreetingService
+     * A mocked FourSquareFindRecommendedPlacesService
      */
     @Mock
     private FourSquareFindRecommendedPlacesService findRecommendedPlacesService;
 
 
     /**
-     * A GreetingController instance with <code>@Mock</code> components injected
+     * A SearchPlacesController instance with <code>@Mock</code> components injected
      * into it.
      */
     @InjectMocks
