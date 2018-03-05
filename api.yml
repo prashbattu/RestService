@@ -1,0 +1,79 @@
+swagger: "2.0"
+info:
+  version: "1.0"
+  title:   Find Recommended Venues
+  description: Find Recommended Venues using Foursquare API
+
+host: localhost
+# basePath prefixes all resource paths 
+basePath: /venues
+# 
+schemes:
+  # tip: remove http to make production-grade
+  - http
+paths:
+  /recommended/{poi}:
+    get:
+      description: For given valid town find recommended venues
+      # used as the method name of the controller
+      operationId: findRecommendedPlaces
+      parameters:
+        - name: "poi"
+          in: "path"
+          description: "Name of the town or city"
+          required: true
+          type: "string"
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          enum: [application/json]
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/SuccessResponse"
+        "400":
+          description: Error
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/BadRequestResponse"
+        "500":
+          description: Error
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/InternalServerErrorResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  
+definitions:
+  SuccessResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string  
+  ErrorResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  InternalServerErrorResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  BadRequestResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+
+
